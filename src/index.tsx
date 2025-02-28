@@ -42,12 +42,12 @@ app/*
       return c.res({ title, url: oneTimeUrl });
     },
     {
-      name: "Keccak256",
-      description: "Keccak256 Composer",
-      icon: "eye-closed",
+      name: "Scribble",
+      description: "Scribble Drawings",
+      icon: "pencil",
       aboutUrl: aboutUrlWorker,
       imageUrl:
-        "https://r2.fc-clients-cast-action.artlu.xyz/Keccak256-logo-256-256.png",
+        "https://scribbleonchain.com/icon-256.png",
     }
   )
   .hono.get("/draw", (c) => {
