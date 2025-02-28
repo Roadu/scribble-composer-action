@@ -2,7 +2,7 @@ import { Button, Frog } from "frog";
 import { RedisCache } from "./lib/redis";
 
 const title = "Scribble Action";
-const browserLocation = "https://scribble-composer-action.raodu.workers.dev";
+const browserLocation = "https://scribble-composer-action.roadu.workers.dev";
 const externalRoute = "https://scribbleonchain.com";
 const aboutUrl = "https://github.com/roadu/scribble-composer-action";
 const aboutUrlWorker =
@@ -21,10 +21,6 @@ app/*
   .composerAction(
     "/",
     async (c) => {
-      // generate a secure random one-time nonce
-      const nonce = crypto.getRandomValues(new Uint8Array(16)).join("");
-      const redisCache = new RedisCache(c.env);
-      await redisCache.setNonce(nonce);
       const oneTimeUrl = `${browserLocation}/draw`;
 
       return c.res({ title, url: oneTimeUrl });
