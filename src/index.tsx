@@ -18,18 +18,6 @@ export const app = new Frog<{ Bindings: Bindings }>({
 
 app/* 
   .frame("/qrcode", (c) => c.res({ image: qrCode, imageAspectRatio: "1:1" })) */
-  .castAction(
-    "/cast-action",
-    (c) => {
-      return c.res({ type: "frame", path: "/ephemeral-frame" });
-    },
-    {
-      name: "Read SassyHash",
-      icon: "eye",
-      description: "Read Keccak256 hashes sent via Composer Action",
-      aboutUrl,
-    }
-  )
   .composerAction(
     "/",
     async (c) => {
