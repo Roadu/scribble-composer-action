@@ -13,7 +13,7 @@ const aboutUrlWorker =
 export const app = new Frog<{ Bindings: Bindings }>({
   browserLocation,
   title,
-  verify: false,
+  verify: true,
 });
 
 app/* 
